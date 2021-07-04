@@ -71,13 +71,28 @@ I used EC2 instance (Free Tier) to install docker. I took help from below link- 
 
 # Docker Image Creation
 
-I Created a directory where I established a docker image or Contaianer using following command
+**process of making a Container**
 
-`mkdir redis`
-
-`cd redis`
+I established a docker image or Contaianer using following command
 
 `touch Dockerfile`
+
+`vi Dockerfile`
+
+>`From ubuntu`
+
+>`RUN apt update -y`
+
+>`RUN apt install nginx -y`
+
+>`CMD ["nginx", "-g", "daemon off;"]`
+
+`docker build -t mynginx .`
+
+`docker run -p 80:80 mynginx`
+
+Hit my IP in the browser and I find the default text in the webpage.
+
 
 
 
