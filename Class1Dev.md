@@ -59,6 +59,29 @@ A DHCP Server is a network server that assigns IP addresses, default gateways, a
 
 I used EC2 instance (Free Tier) to install docker. I took help from below link-  https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
 
+`sudo yum update -y` [Update the installed packages and package cache on your instance.]
+
+`sudo amazon-linux-extras install docker` [Install the most recent Docker Engine package.]
+
+`sudo yum install docker` [Linux Installation]
+
+`sudo service docker start` [After installation, we need to start Docker]
+
+`sudo usermod -a -G docker ec2-user` [I can use Docker commands without requiring sudo if I add the ec2-user to the docker group]
+
+# Docker Image Creation
+
+I Created a directory where I established a docker image or Contaianer using following command
+
+`mkdir redis`
+
+`cd redis`
+
+`touch Dockerfile`
+
+
+
+
 
 
 
