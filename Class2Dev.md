@@ -11,6 +11,8 @@ After creating container in EC2 instance, We only  get to view default text when
 
 # Indise Dockerfile I have defined the location  where I want to copy the newly created index.html file 
 
+`touch Dockerfile`
+
 `FROM ubuntu`
 
 `RUN apt update`
@@ -21,6 +23,7 @@ After creating container in EC2 instance, We only  get to view default text when
 
 `CMD ["nginx", "-g","daemon off;"]`
 
-I updated the dockerfile and follow the previous process to build a container. 
+
+
 
 
